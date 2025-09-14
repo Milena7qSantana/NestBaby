@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestbaby - Conteúdo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bege: #F5F5DC;
+            --rosa-bebe: #FFC0CB;
+            --marrom-suave: #5A5A5A;
+            --branco: #FFFFFF;
+            --cinza-claro: #EFEFEF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bege);
+            color: var(--marrom-suave);
+            padding-bottom: 80px; /* Espaço para a barra de navegação inferior */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--marrom-suave);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            background-color: var(--cinza-claro);
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            font-size: 1em;
+            outline: none;
+            color: var(--marrom-suave);
+        }
+
+        .search-bar input::placeholder {
+            color: #B0B0B0;
+        }
+
+        .search-bar span {
+            color: #B0B0B0;
+            margin-right: 10px;
+        }
+
+        .categories-section h2, .content-feed h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .categories-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto; /* Permite rolagem horizontal */
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-size: 0.8em;
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .category-icon {
+            background-color: var(--branco);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-card {
+            display: flex;
+            background-color: var(--branco);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--marrom-suave);
+        }
+
+        .content-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .content-info {
+            padding: 15px;
+        }
+
+        .content-info h3 {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .content-info p.type {
+            font-size: 0.8em;
+            color: var(--rosa-bebe);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .content-info p.summary {
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--branco);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+
+        .nav-item.active {
+            color: var(--rosa-bebe);
+            opacity: 1;
+        }
+
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Conteúdo Curado</h1>
+
+        <div class="search-bar">
+            <span>🔍</span>
+            <input type="text" placeholder="Buscar por tema, palavra-chave...">
+        </div>
+
+        <div class="categories-section">
+            <h2>Navegue por categorias</h2>
+            <div class="categories-list">
+                <a href="#" class="category-item">
+                    <div class="category-icon">😴</div>
+                    <span>Sono</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-icon">🤱</div>
+                    <span>Amamentação</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-icon">🧠</div>
+                    <span>Saúde Mental</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-icon">👶</div>
+                    <span>Desenvolvimento</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-icon">🍎</div>
+                    <span>Alimentação</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-icon">🩺</div>
+                    <span>Saúde</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="content-feed">
+            <h2>Em Destaque</h2>
+
+            <a href="#" class="content-card">
+                <img src="imagens/artigo1.png" alt="Imagem do artigo" class="content-thumbnail">
+                <div class="content-info">
+                    <p class="type">Artigo</p>
+                    <h3>Como lidar com a privação de sono</h3>
+                    <p class="summary">Estratégias de especialistas para mães exaustas e bebês que demoram para dormir a noite toda.</p>
+                </div>
+            </a>
+            
+            <a href="#" class="content-card">
+                <img src="imagens/artigo2.png" alt="Imagem do vídeo" class="content-thumbnail">
+                <div class="content-info">
+                    <p class="type">Vídeo</p>
+                    <h3>Primeiros socorros para bebês</h3>
+                    <p class="summary">Um guia visual e prático com os passos essenciais para situações de emergência, verificado por pediatras.</p>
+                </div>
+            </a>
+
+            <a href="#" class="content-card">
+                <img src="imagens/artigo3.png" alt="Imagem do artigo" class="content-thumbnail">
+                <div class="content-info">
+                    <p class="type">Artigo</p>
+                    <h3>Amamentação sem dor: 5 dicas essenciais</h3>
+                    <p class="summary">Dicas de uma consultora para uma pega correta e como evitar fissuras nos primeiros dias de amamentação.</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="Inicio.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            Início
+        </a>
+        <a href="Grupos.html" class="nav-item">
+            <span class="nav-icon">👩‍👧‍👦</span>
+            Grupos
+        </a>
+        <a href="Ajuda.html" class="nav-item">
+            <span class="nav-icon">🙏</span>
+            Ajuda
+        </a>
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">📚</span>
+            Conteúdo
+        </a>
+        <a href="Perfil.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            Perfil
+        </a>
+    </div>
+
+</body>
+</html>

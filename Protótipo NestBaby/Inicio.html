@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestbaby - Início</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bege: #F5F5DC;
+            --rosa-bebe: #FFC0CB;
+            --marrom-suave: #5A5A5A;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bege);
+            color: var(--marrom-suave);
+            padding-bottom: 80px; /* Espaço para a barra de navegação inferior */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .greeting h1 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--marrom-suave);
+        }
+
+        .greeting p {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .notification-icon {
+            font-size: 1.5em;
+            color: var(--rosa-bebe);
+        }
+
+        .quick-actions {
+            background-color: var(--branco);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .quick-actions h2 {
+            font-size: 1em;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--rosa-bebe);
+            color: var(--branco);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f1a9b7;
+        }
+
+        .feed-section h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .feed-post-card {
+            background-color: var(--branco);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .post-header-info h3 {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .post-header-info p {
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .post-content {
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .post-action {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: var(--marrom-suave);
+            text-decoration: none;
+        }
+
+        .post-action span {
+            margin-left: 5px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--branco);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+
+        .nav-item.active {
+            color: var(--rosa-bebe);
+            opacity: 1;
+        }
+
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-bar">
+            <div class="greeting">
+                <h1>Olá, Jéssica.</h1>
+                <p>Bem-vinda de volta!</p>
+            </div>
+            <span class="notification-icon">🔔</span>
+        </div>
+
+        <div class="quick-actions">
+            <h2>Precisa de ajuda com algo hoje?</h2>
+            <a href="#" class="btn">Pedir Ajuda</a>
+        </div>
+
+        <div class="feed-section">
+            <h2>Atividade Recente</h2>
+
+            <div class="feed-post-card">
+                <div class="post-header">
+                    <img src="imagens/maebento.png" alt="Foto de perfil" class="profile-pic">
+                    <div class="post-header-info">
+                        <h3>Mãe do Bento</h3>
+                        <p>No grupo 'Mães do Bairro Esperança'</p>
+                    </div>
+                </div>
+                <p class="post-content">
+                    "Alguém com bebês de 6 meses quer marcar um encontro no parque essa semana? Seria ótimo para eles brincarem e para nós conversarmos um pouco!"
+                </p>
+                <div class="post-actions">
+                    <a href="#" class="post-action">👍 <span>3</span></a>
+                    <a href="#" class="post-action">💬 <span>1</span></a>
+                </div>
+            </div>
+
+            <div class="feed-post-card">
+                <div class="post-header">
+                    <img src="imagens/maealice.png" alt="Foto de perfil" class="profile-pic">
+                    <div class="post-header-info">
+                        <h3>Mãe da Alice</h3>
+                        <p>No grupo 'Dúvidas de Sono'</p>
+                    </div>
+                </div>
+                <p class="post-content">
+                    "Gente, alguma dica para o bebê dormir a noite toda? Minha filha tem 3 meses e ainda acorda várias vezes. Estou exausta! 😅"
+                </p>
+                <div class="post-actions">
+                    <a href="#" class="post-action">👍 <span>8</span></a>
+                    <a href="#" class="post-action">💬 <span>5</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            Início
+        </a>
+        <a href="Grupos.html" class="nav-item">
+            <span class="nav-icon">👩‍👧‍👦</span>
+            Grupos
+        </a>
+        <a href="Ajuda.html" class="nav-item">
+            <span class="nav-icon">🙏</span>
+            Ajuda
+        </a>
+        <a href="Conteudo.html" class="nav-item">
+            <span class="nav-icon">📚</span>
+            Conteúdo
+        </a>
+        <a href="Perfil.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            Perfil
+        </a>
+    </div>
+
+</body>
+</html>

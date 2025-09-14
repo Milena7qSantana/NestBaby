@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestbaby - Nossos Serviços</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bege: #F5F5DC;
+            --rosa-bebe: #FFC0CB;
+            --marrom-suave: #5A5A5A;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bege);
+            color: var(--marrom-suave);
+            padding: 20px 20px 80px; /* Adiciona padding inferior para a barra de navegação */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--marrom-suave);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            background-color: var(--branco);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-icon {
+            font-size: 2.5em;
+            color: var(--rosa-bebe);
+            margin-right: 20px;
+            line-height: 1; /* Alinha o ícone verticalmente */
+        }
+
+        .service-info h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--marrom-suave);
+            margin-bottom: 5px;
+        }
+
+        .service-info p {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--rosa-bebe);
+            color: var(--branco);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f1a9b7;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--branco);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+
+        .nav-item.active {
+            color: var(--rosa-bebe);
+            opacity: 1;
+        }
+
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Conheça Nossos Serviços</h1>
+
+        <div class="service-card">
+            <span class="service-icon">👩‍👧‍👦</span>
+            <div class="service-info">
+                <h2>Conecte-se com Mães Próximas</h2>
+                <p>Encontre grupos de apoio na sua região e construa amizades duradouras com quem entende a sua jornada.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <span class="service-icon">🙏</span>
+            <div class="service-info">
+                <h2>Troque Apoio de Verdade</h2>
+                <p>Peça ou ofereça ajuda prática, como um ombro amigo para conversar, um par de mãos extra ou uma indicação de pediatra.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <span class="service-icon">📚</span>
+            <div class="service-info">
+                <h2>Informação Confiável</h2>
+                <p>Acesse uma biblioteca de conteúdos verificados por especialistas, para tirar suas dúvidas sem estresse e com segurança.</p>
+            </div>
+        </div>
+
+        <a href="#" class="cta-button">Começar a Fazer Parte da NestBaby</a>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="Inicio.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            Início
+        </a>
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">👩‍👧‍👦</span>
+            Grupos
+        </a>
+        <a href="Ajuda.html" class="nav-item">
+            <span class="nav-icon">🙏</span>
+            Ajuda
+        </a>
+        <a href="Conteudo.html" class="nav-item">
+            <span class="nav-icon">📚</span>
+            Conteúdo
+        </a>
+        <a href="Perfil.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            Perfil
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestbaby - Ajuda Mútua</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bege: #F5F5DC;
+            --rosa-bebe: #FFC0CB;
+            --marrom-suave: #5A5A5A;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bege);
+            color: var(--marrom-suave);
+            padding-bottom: 80px; /* Espaço para a barra de navegação inferior */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--marrom-suave);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .action-btn {
+            flex-grow: 1;
+            padding: 12px;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-request {
+            background-color: var(--rosa-bebe);
+            color: var(--branco);
+        }
+
+        .btn-offer {
+            background-color: var(--bege);
+            border: 2px solid var(--rosa-bebe);
+            color: var(--rosa-bebe);
+        }
+
+        .btn-request:hover {
+            background-color: #f1a9b7;
+        }
+
+        .btn-offer:hover {
+            background-color: var(--rosa-bebe);
+            color: var(--branco);
+        }
+
+        .help-card {
+            background-color: var(--branco);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .help-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .help-info h3 {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .help-info p {
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .help-content {
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .help-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--rosa-bebe);
+            color: var(--branco);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .help-button:hover {
+            background-color: #f1a9b7;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--branco);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+
+        .nav-item.active {
+            color: var(--rosa-bebe);
+            opacity: 1;
+        }
+
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ajuda Mútua</h1>
+
+        <div class="action-buttons">
+            <a href="#" class="action-btn btn-request">Pedir Ajuda</a>
+            <a href="#" class="action-btn btn-offer">Oferecer Ajuda</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-header">
+                <img src="imagens/maealice.png" alt="Foto de perfil" class="profile-pic">
+                <div class="help-info">
+                    <h3>Mãe da Alice</h3>
+                    <p>Precisa de ajuda no Jardim Paulista</p>
+                </div>
+            </div>
+            <p class="help-content">
+                "Preciso de 30 minutos para tomar um banho e almoçar. Alguma vizinha poderia segurar a Alice rapidinho? Estou exausta!"
+            </p>
+            <a href="#" class="help-button">Eu posso ajudar!</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-header">
+                <img src="imagens/maetheo.png" alt="Foto de perfil" class="profile-pic">
+                <div class="help-info">
+                    <h3>Mãe do Theo</h3>
+                    <p>Oferece ajuda em Perdizes</p>
+                </div>
+            </div>
+            <p class="help-content">
+                "Se você estiver se sentindo sozinha, me chame para um café virtual. Estou aqui para ouvir e te dar uma palavra de apoio!"
+            </p>
+            <a href="#" class="help-button">Me chame!</a>
+        </div>
+        
+        <div class="help-card">
+            <div class="help-header">
+                <img src="imagens/maemaria.png" alt="Foto de perfil" class="profile-pic">
+                <div class="help-info">
+                    <h3>Mãe da Maria</h3>
+                    <p>Precisa de ajuda em Pinheiros</p>
+                </div>
+            </div>
+            <p class="help-content">
+                "Minha bebê está com a pele super ressecada. Alguém tem indicação de um creme bom para recém-nascidos?"
+            </p>
+            <a href="#" class="help-button">Eu posso ajudar!</a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="Inicio.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            Início
+        </a>
+        <a href="Grupos.html" class="nav-item">
+            <span class="nav-icon">👩‍👧‍👦</span>
+            Grupos
+        </a>
+        <a href="Ajuda.html" class="nav-item active">
+            <span class="nav-icon">🙏</span>
+            Ajuda
+        </a>
+        <a href="Conteudo.html" class="nav-item">
+            <span class="nav-icon">📚</span>
+            Conteúdo
+        </a>
+        <a href="Perfil.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            Perfil
+        </a>
+    </div>
+
+</body>
+</html>

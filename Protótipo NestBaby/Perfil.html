@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestbaby - Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bege: #F5F5DC;
+            --rosa-bebe: #FFC0CB;
+            --marrom-suave: #5A5A5A;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bege);
+            color: var(--marrom-suave);
+            padding-bottom: 80px; /* Espaço para a barra de navegação inferior */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--rosa-bebe);
+            margin-bottom: 10px;
+        }
+
+        .profile-header h1 {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .profile-header p {
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--branco);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--rosa-bebe);
+        }
+
+        .stat-item p {
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .profile-menu {
+            background-color: var(--branco);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden; /* Garante que os cantos arredondados funcionem */
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .menu-item-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            font-size: 1.2em;
+            color: var(--rosa-bebe);
+            margin-right: 15px;
+        }
+
+        .menu-label {
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        .arrow-icon {
+            color: #ccc;
+        }
+        
+        .logout-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: var(--bege);
+            color: #E74C3C;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--branco);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--marrom-suave);
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+
+        .nav-item.active {
+            color: var(--rosa-bebe);
+            opacity: 1;
+        }
+
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-header">
+            <img src="imagens/maebento.png" alt="Foto de perfil" class="profile-pic">
+            <h1>Mãe do Bento</h1>
+            <p>Brasília, DF</p>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat-item">
+                <h2>12</h2>
+                <p>Conexões</p>
+            </div>
+            <div class="stat-item">
+                <h2>5</h2>
+                <p>Ajuda Oferecida</p>
+            </div>
+            <div class="stat-item">
+                <h2>18</h2>
+                <p>Grupos</p>
+            </div>
+        </div>
+
+        <div class="profile-menu">
+            <a href="#" class="menu-item">
+                <div class="menu-item-info">
+                    <span class="menu-icon">✏️</span>
+                    <span class="menu-label">Editar Perfil</span>
+                </div>
+                <span class="arrow-icon">›</span>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-item-info">
+                    <span class="menu-icon">⚙️</span>
+                    <span class="menu-label">Configurações</span>
+                </div>
+                <span class="arrow-icon">›</span>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-item-info">
+                    <span class="menu-icon">❓</span>
+                    <span class="menu-label">Central de Ajuda</span>
+                </div>
+                <span class="arrow-icon">›</span>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-item-info">
+                    <span class="menu-icon">📄</span>
+                    <span class="menu-label">Termos de Uso</span>
+                </div>
+                <span class="arrow-icon">›</span>
+            </a>
+        </div>
+        
+        <a href="Login.html" class="logout-btn">Sair</a>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="Inicio.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            Início
+        </a>
+        <a href="Grupos.html" class="nav-item">
+            <span class="nav-icon">👩‍👧‍👦</span>
+            Grupos
+        </a>
+        <a href="Ajuda.html" class="nav-item">
+            <span class="nav-icon">🙏</span>
+            Ajuda
+        </a>
+        <a href="Conteudo.html" class="nav-item">
+            <span class="nav-icon">📚</span>
+            Conteúdo
+        </a>
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">👤</span>
+            Perfil
+        </a>
+    </div>
+
+</body>
+</html>
